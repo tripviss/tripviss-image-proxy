@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  image-resizer:
+    build:
+      context: ./docker/image-resizer
+      dockerfile: ./Dockerfile
+    env_file: ./docker/image-resizer/.env
+    environment:
+      - TERM=xterm-256color

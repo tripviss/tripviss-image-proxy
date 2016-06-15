@@ -1,0 +1,15 @@
+*.DS_Store
+*.sublime-project
+*.sublime-workspace
+._*
+.dockerignore
+.editorconfig
+.env
+.env.dist
+.git/
+.gitignore
+.gitmodules
+docker-compose.override.yml
+docker-compose.yml
+Dockerfile
+Thumbs.db

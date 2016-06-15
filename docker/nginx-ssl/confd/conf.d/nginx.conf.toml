@@ -1,0 +1,7 @@
+[template]
+src = "nginx.conf.tmpl"
+dest = "/etc/nginx/nginx.conf"
+keys = [
+    "/deploy/env",
+    "/nameservers",
+]

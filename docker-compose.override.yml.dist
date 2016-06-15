@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  # image-resizer:
+  #   ports:
+  #     - '80:3001'
+
+  # nginx-ssl:
+  #   build:
+  #     context: ./docker/nginx-ssl
+  #     dockerfile: ./docker/nginx-ssl/Dockerfile
+  #   env_file: ./docker/nginx-ssl/.env
+  #   environment:
+  #     - TERM=xterm-256color
+  #   ports:
+  #     - '80:80'
+  #     - '443:443'
+  #   volumes:
+  #     - ./docker/nginx-ssl/ssl:/etc/nginx/ssl:ro
+  #     - nginx-ssl-logs:/var/log/nginx
+
+volumes:
+  # nginx-ssl-logs: {}
