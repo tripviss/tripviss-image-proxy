@@ -4,8 +4,6 @@ services:
   # image-resizer:
   #   ports:
   #     - '80:3001'
-  #   volumes:
-  #     - ../image-resizer:/srv/image-resizer
 
   # nginx-ssl:
   #   build:
