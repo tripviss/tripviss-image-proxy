@@ -1,8 +1,0 @@
-[template]
-src = "image-resizer.conf.tmpl"
-dest = "/etc/nginx/conf.d/image-resizer.conf"
-keys = [
-    "/domain",
-    "/upstream/host",
-    "/upstream/port",
-]
