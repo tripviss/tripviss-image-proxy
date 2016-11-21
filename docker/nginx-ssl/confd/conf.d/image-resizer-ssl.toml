@@ -1,7 +1,0 @@
-[template]
-src = "image-resizer-ssl.tmpl"
-dest = "/etc/nginx/conf.d/image-resizer-ssl"
-keys = [
-    "/deploy/env",
-    "/domain",
-]
