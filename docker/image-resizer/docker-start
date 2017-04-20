@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+if [ "$NODE_ENV" = 'development' ]; then
+	yarn install
+fi
+
+exec yarn start

@@ -1,7 +1,0 @@
-version: '2'
-
-services:
-  image-resizer:
-    image: quay.io/tripviss/tripviss-image-proxy:image-resizer
-    # ports:
-    #   - '80:3001'

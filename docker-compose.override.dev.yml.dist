@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  image-resizer:
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        window: 10s
+    env_file: ./docker/image-resizer/.env
+    environment:
+      - TERM
+    healthcheck:
+      interval: 30s
+      retries: 10
+      timeout: 30s
+    image: quay.io/tripviss/tripviss-image-proxy:image-resizer
+    networks:
+      - default
+    # ports:
+    #   - '80:3001'
+    volumes:
+      - ./node_modules:/srv/image-resizer-instance/node_modules:rw
+      # - ./yarn.lock:/srv/image-resizer-instance/yarn.lock:rw
+
+networks:
+  default: {}
