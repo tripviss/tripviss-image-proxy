@@ -9,7 +9,10 @@ services:
         window: 10s
     env_file: ./docker/image-resizer/.env
     environment:
+      - LETSENCRYPT_EMAIL=dev@tripviss.com
+      - LETSENCRYPT_HOST=
       - TERM
+      - VIRTUAL_HOST=images.tripviss.com
     healthcheck:
       interval: 30s
       retries: 3
@@ -17,10 +20,14 @@ services:
     image: quay.io/tripviss/tripviss-image-proxy:image-resizer
     networks:
       - default
+      - tripvissnginxproxy_default
     # ports:
     #   - '80:3001'
+    restart: always
     volumes:
       - /srv/image-resizer-instance/node_modules
 
 networks:
   default: {}
+  tripvissnginxproxy_default:
+    external: true
